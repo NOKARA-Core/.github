@@ -1,51 +1,53 @@
 <div align="center">
 
-<!-- JIKA ANDA MEMILIKI BANNER, GANTI URL INI -->
+<!-- Banner Atas -->
 <img src="banner.svg" alt="NOKARA Banner" width="100%" />
 
 <br/>
+<br/>
 
-# NOKARA
+# NOKARA CORE
 
-**Membangun Solusi Digital Terintegrasi yang Memberdayakan Masyarakat Indonesia.**
+**Membangun Ekosistem Digital Terintegrasi yang Memberdayakan Masyarakat Indonesia.**
 
-<a href="https://nokara.id">Website Resmi</a> •
-<a href="#proyek-kami">Lihat Proyek</a> •
-<a href="#kontribusi">Berkontribusi</a>
+<!-- Tombol Navigasi -->
+[![Website Resmi](https://img.shields.io/badge/Website_Resmi-nokara.id-F07823?style=for-the-badge&logo=googlechrome&logoColor=white)](https://nokara.id)
+[![Lihat Proyek](https://img.shields.io/badge/Lihat_Proyek-Explore-7EBEB0?style=for-the-badge&logo=github&logoColor=white)](#proyek-unggulan)
+[![Berkontribusi](https://img.shields.io/badge/Berkontribusi-Join_Us-EEA834?style=for-the-badge&logo=handshake&logoColor=white)](#bergabung-dengan-kami)
 
 <br/>
 
----
-
-## Identitas Brand
-
-Di bawah ini adalah gambaran visual filosofi kami, didukung oleh animasi ringan untuk menekankan prinsip Inti kami (N-O-K-A-R-A).
-<!-- MASUKKAN KODE SVG ANIMASI DI SINI JIKA DI-HOST -->
+<!-- Animasi Identitas Brand -->
 <img src="nokara-id-brand.svg" alt="Animasi Identitas Brand NOKARA" width="100%" />
 
 </div>
 
-### Filosofi & Janji
+<br/>
 
-**NOKARA** bukan sekadar entitas teknologi. Ini adalah simbol pertumbuhan, kolaborasi, dan kemajuan digital yang lahir dari Papua untuk Indonesia.
+## Filosofi & Janji Kami
 
-Kami berkomitmen untuk **membangun sesuatu yang mudah digunakan, namun lengkap dan sesuai dengan kebutuhan user.** Fokus kami adalah menyediakan teknologi yang:
+> **NOKARA** bukan sekadar entitas teknologi. Ini adalah simbol pertumbuhan, kolaborasi, dan kemajuan digital yang **lahir dari Papua untuk Indonesia**.
 
-*   **Dekat dengan Masyarakat**
-*   **Sederhana**
-*   **Terpercaya**
-*   **Mudah Diakses**
+Kami berkomitmen untuk membangun ekosistem perangkat lunak yang mengatasi keterbatasan akses. Fokus utama kami adalah menciptakan teknologi yang memenuhi 4 pilar berikut:
+
+| Dekat dengan Masyarakat | Sederhana | Terpercaya | Mudah Diakses |
+| :--- | :--- | :--- | :--- |
+| Memahami dan hadir untuk memecahkan masalah lokal secara nyata. | Desain antarmuka yang intuitif dan ramah pengguna untuk semua kalangan. | Keamanan data dan keandalan sistem yang selalu dijaga. | Integrasi mulus dengan platform keseharian user. |
+
+<br/>
 
 ---
 
-### Budaya Perusahaan (Pipeline Pertumbuhan)
+## Budaya Perusahaan (Pipeline Pertumbuhan)
 
-Budaya kami linier dan fokus pada siklus hidup produk yang berkelanjutan:
+Budaya kami bergerak secara linier. Kami memastikan setiap baris kode yang ditulis berujung pada manfaat nyata bagi pertumbuhan masyarakat, UMKM, dan institusi pendidikan.
+
+<div align="center">
 
 ```mermaid
 graph LR
-    A[Build] --> B(Grow)
-    B --> C(Impact)
-    style A fill:#D1E7DD,stroke:#198754,stroke-width:2px,color:black
-    style B fill:#FFF3CD,stroke:#FFC107,stroke-width:2px,color:black
-    style C fill:#D1E7DD,stroke:#198754,stroke-width:2px,color:black
+    A["BUILD<br/>Membangun Fondasi"] --> B("GROW<br/>Skalabilitas Solusi")
+    B --> C("IMPACT<br/>Dampak Nyata")
+    style A fill:#5A3F30,stroke:#F07823,stroke-width:2px,color:#F1E3C4
+    style B fill:#7EBEB0,stroke:#5A3F30,stroke-width:2px,color:#111
+    style C fill:#EEA834,stroke:#5A3F30,stroke-width:2px,color:#111
