@@ -20,11 +20,8 @@
 ## Identitas Brand
 
 Di bawah ini adalah gambaran visual filosofi kami, didukung oleh animasi ringan untuk menekankan prinsip Inti kami (N-O-K-A-R-A).
-
-> *Aset ini didasarkan pada file image_3.png Anda, namun dirender ulang sebagai SVG animasi untuk dampak profesional.*
-
 <!-- MASUKKAN KODE SVG ANIMASI DI SINI JIKA DI-HOST -->
-<img src="identitas_brand_animasi.svg" alt="Animasi Identitas Brand NOKARA" width="100%" />
+<img src="nokara-id-brand.svg" alt="Animasi Identitas Brand NOKARA" width="100%" />
 
 </div>
 
