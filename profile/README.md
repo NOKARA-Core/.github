@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Banner Atas -->
-<img src="banner.svg" alt="NOKARA Banner" width="100%" />
+<img src="../banner.svg" alt="NOKARA Banner" width="100%" />
 
 <br/>
 <br/>
@@ -18,7 +18,7 @@
 <br/>
 
 <!-- Animasi Identitas Brand -->
-<img src="nokara-id-brand.svg" alt="Animasi Identitas Brand NOKARA" width="100%" />
+<img src="../nokara-id-brand.svg" alt="Animasi Identitas Brand NOKARA" width="100%" />
 
 </div>
 
