@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+
+      /* Typography */
+      .text-title { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 800; fill: #F1E3C4; letter-spacing: 6px; }
+      .text-sub { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #EEA834; letter-spacing: 3px; text-transform: uppercase; }
+      
+      .node-text { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 800; fill: #F1E3C4; letter-spacing: 1px; }
+      .node-subtext { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; fill: #7EBEB0; }
+      .node-letter { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 800; fill: #EEA834; }
+
+      /* Shapes */
+      .bg-main { fill: #5A3F30; }
+      .diamond-outer { fill: #5A3F30; stroke: #F07823; stroke-width: 3px; transition: all 0.4s ease; }
+      .diamond-inner { fill: none; stroke: #7EBEB0; stroke-width: 1.5px; stroke-dasharray: 4 4; transition: all 0.4s ease; }
+      .icon-stroke { fill: none; stroke: #F1E3C4; stroke-width: 2px; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Animasi Aliran Data */
+      .flow-line {
+        fill: none;
+        stroke: #7EBEB0;
+        stroke-width: 2px;
+        stroke-dasharray: 8 8;
+        animation: flowAnim 1.5s linear infinite;
+      }
+      
+      /* Animasi Floating (Mengambang) pada Node */
+      .node-group {
+        animation: floatAnim 4s ease-in-out infinite;
+        cursor: pointer;
+      }
+      .node-group:nth-child(even) {
+        animation-delay: 2s;
+      }
+
+      /* Interaksi Hover */
+      .node-group:hover .diamond-outer {
+        stroke: #EEA834;
+        fill: #F07823;
+        transform: scale(1.1);
+      }
+      .node-group:hover .diamond-inner {
+        stroke: #5A3F30;
+        transform: scale(1.1);
+      }
+      .node-group:hover .node-letter {
+        fill: #5A3F30;
+      }
+
+      @keyframes flowAnim {
+        to { stroke-dashoffset: -16; }
+      }
+      @keyframes floatAnim {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      /* Cendrawasih Animasi Nafas */
+      .cendrawasih-path {
+        animation: breathAnim 6s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes breathAnim {
+        0%, 100% { opacity: 0.15; transform: scale(1); }
+        50% { opacity: 0.25; transform: scale(1.02); }
+      }
+    </style>
+    
+    <!-- Pola Motif Anyaman Noken -->
+    <pattern id="noken-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L40 20 L20 40 L0 20 Z" fill="none" stroke="#EEA834" stroke-width="1" opacity="0.15" />
+      <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="none" stroke="#F07823" stroke-width="1" opacity="0.2" />
+      <line x1="0" y1="20" x2="40" y2="20" stroke="#7EBEB0" stroke-width="0.5" opacity="0.1" />
+      <line x1="20" y1="0" x2="20" y2="40" stroke="#7EBEB0" stroke-width="0.5" opacity="0.1" />
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="100%" height="100%" class="bg-main" />
+  <rect width="100%" height="100%" fill="url(#noken-pattern)" />
+
+  <!-- Siluet Burung Cendrawasih (Ekor Mengalir) -->
+  <g class="cendrawasih-path" fill="none" stroke="#F1E3C4" stroke-width="2" opacity="0.15">
+    <path d="M 850,150 Q 820,180 750,190 C 600,210 400,100 150,50 C 300,150 500,280 700,220 C 780,190 850,150 850,150 Z" />
+    <path d="M 850,150 Q 880,120 900,100 Q 920,80 940,110 Q 920,140 880,160 Z" fill="#EEA834" opacity="0.5"/>
+    <path d="M 820,170 C 650,280 450,380 200,400 C 450,380 650,320 800,200 Z" stroke="#EEA834" stroke-width="3" />
+    <path d="M 800,190 C 700,300 550,420 300,450 C 500,400 680,320 780,210 Z" stroke="#F07823" stroke-width="4" />
+  </g>
+
+  <!-- Teks Header -->
+  <text x="500" y="80" class="text-title" text-anchor="middle">NOKARA</text>
+  <text x="500" y="115" class="text-sub" text-anchor="middle">Lahir dari Papua untuk Indonesia</text>
+
+  <!-- Garis Aliran Data Utama -->
+  <line x1="125" y1="260" x2="875" y2="260" class="flow-line" filter="url(#glow)" />
+
+  <!-- NODE 1: N -->
+  <g class="node-group" style="transform-origin: 125px 260px;">
+    <polygon points="125,205 180,260 125,315 70,260" class="diamond-outer" />
+    <polygon points="125,215 170,260 125,305 80,260" class="diamond-inner" />
+    <path d="M125 240 c-7 0 -14 7 -14 14 c0 9 14 17 14 17 c0 0 14 -8 14 -17 c0 -7 -7 -14 -14 -14 z" class="icon-stroke" />
+    <text x="125" y="360" class="node-text" text-anchor="middle">Nurture</text>
+    <text x="125" y="380" class="node-subtext" text-anchor="middle">Bertumbuh</text>
+    <text x="125" y="190" class="node-letter" text-anchor="middle">N</text>
+  </g>
+
+  <!-- NODE 2: O -->
+  <g class="node-group" style="transform-origin: 275px 260px;">
+    <polygon points="275,205 330,260 275,315 220,260" class="diamond-outer" />
+    <polygon points="275,215 320,260 275,305 230,260" class="diamond-inner" />
+    <path d="M265 245 l10 -5 l10 5 v7 c0 7 -5 13 -10 15 c-5 -2 -10 -8 -10 -15 v-7 z" class="icon-stroke" />
+    <text x="275" y="360" class="node-text" text-anchor="middle">Ownership</text>
+    <text x="275" y="380" class="node-subtext" text-anchor="middle">Tanggung Jawab</text>
+    <text x="275" y="190" class="node-letter" text-anchor="middle">O</text>
+  </g>
+
+  <!-- NODE 3: K -->
+  <g class="node-group" style="transform-origin: 425px 260px;">
+    <polygon points="425,205 480,260 425,315 370,260" class="diamond-outer" />
+    <polygon points="425,215 470,260 425,305 380,260" class="diamond-inner" />
+    <circle cx="417" cy="268" r="5" class="icon-stroke" />
+    <circle cx="433" cy="252" r="5" class="icon-stroke" />
+    <path d="M412 255 l12 -12 M422 272 l12 -12" class="icon-stroke" />
+    <text x="425" y="360" class="node-text" text-anchor="middle">Kolaborasi</text>
+    <text x="425" y="380" class="node-subtext" text-anchor="middle">Kerja Sama</text>
+    <text x="425" y="190" class="node-letter" text-anchor="middle">K</text>
+  </g>
+
+  <!-- NODE 4: A -->
+  <g class="node-group" style="transform-origin: 575px 260px;">
+    <polygon points="575,205 630,260 575,315 520,260" class="diamond-outer" />
+    <polygon points="575,215 620,260 575,305 530,260" class="diamond-inner" />
+    <path d="M565 254 a10 10 0 1 1 15 5" class="icon-stroke" />
+    <path d="M580 254 l0 5 l5 0" class="icon-stroke" />
+    <path d="M585 266 a10 10 0 1 1 -15 -5" class="icon-stroke" />
+    <path d="M570 266 l0 -5 l-5 0" class="icon-stroke" />
+    <text x="575" y="360" class="node-text" text-anchor="middle">Adaptif</text>
+    <text x="575" y="380" class="node-subtext" text-anchor="middle">Selalu Belajar</text>
+    <text x="575" y="190" class="node-letter" text-anchor="middle">A</text>
+  </g>
+
+  <!-- NODE 5: R -->
+  <g class="node-group" style="transform-origin: 725px 260px;">
+    <polygon points="725,205 780,260 725,315 670,260" class="diamond-outer" />
+    <polygon points="725,215 770,260 725,305 680,260" class="diamond-inner" />
+    <rect x="712" y="247" width="14" height="14" class="icon-stroke" />
+    <rect x="724" y="259" width="14" height="14" class="icon-stroke" />
+    <text x="725" y="360" class="node-text" text-anchor="middle">Respect</text>
+    <text x="725" y="380" class="node-subtext" text-anchor="middle">Menghargai</text>
+    <text x="725" y="190" class="node-letter" text-anchor="middle">R</text>
+  </g>
+
+  <!-- NODE 6: A -->
+  <g class="node-group" style="transform-origin: 875px 260px;">
+    <polygon points="875,205 930,260 875,315 820,260" class="diamond-outer" />
+    <polygon points="875,215 920,260 875,305 830,260" class="diamond-inner" />
+    <path d="M880 243 l-12 14 h10 l-2 9 l12 -14 h-10 l2 -9 z" class="icon-stroke" />
+    <text x="875" y="360" class="node-text" text-anchor="middle">Action</text>
+    <text x="875" y="380" class="node-subtext" text-anchor="middle">Eksekusi</text>
+    <text x="875" y="190" class="node-letter" text-anchor="middle">A</text>
+  </g>
+</svg>
