@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- JIKA ANDA MEMILIKI BANNER, GANTI URL INI -->
-<img src="https://via.placeholder.com/1200x300.png?text=NOKARA+Banner" alt="NOKARA Banner" width="100%" />
+<img src="banner.svg" alt="NOKARA Banner" width="100%" />
 
 <br/>
 
